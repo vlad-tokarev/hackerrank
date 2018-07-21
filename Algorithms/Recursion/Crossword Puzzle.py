@@ -87,13 +87,13 @@ def solve_crossword(crossword, words):
     except StopIteration:
         return crossword
 
-    suitable_words = list(line.suitable_words(words))
-    for word in suitable_words:
+    suitable_words = list(line.suitable_words(words))  # cost = O(n)
+    for word in suitable_words:  # cost = O(1), repeats = n
 
-        line.write(word)
+        line.write(word)  # cost = O(1)
 
-        words.remove(word)
-        filled_crossword = solve_crossword(crossword, words)
+        words.remove(word)  # cost = O(1)
+        filled_crossword = solve_crossword(crossword, words)  # cost = T(n-1)
         if filled_crossword:
             return filled_crossword
         else:
