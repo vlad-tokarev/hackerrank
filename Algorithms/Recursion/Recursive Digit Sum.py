@@ -1,5 +1,9 @@
 #!/bin/python3
 
+"""
+@url https://www.hackerrank.com/challenges/recursive-digit-sum/problem
+"""
+
 import math
 import os
 import random
